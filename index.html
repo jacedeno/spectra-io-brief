@@ -97,6 +97,9 @@
   .shot { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
   .shot img { width: 100%; height: auto; display: block; }
   .shot .cap { font-size: 13px; color: var(--muted); padding: 10px 14px; }
+  .shot.phone { display: flex; flex-direction: column; }
+  .shot.phone img { max-width: 260px; margin: 14px auto 0; border: 1px solid var(--line); border-radius: 12px; }
+  .shot.phone .cap { margin-top: auto; }
   .shot-placeholder {
     display: flex; align-items: center; justify-content: center; min-height: 190px;
     background: repeating-linear-gradient(45deg, #f4f2ec, #f4f2ec 12px, #faf8f3 12px, #faf8f3 24px);
@@ -266,12 +269,12 @@
   <h2>Everything the maintenance team needs, one URL.</h2>
   <p class="lead">A fleet view that reads like your plant — sites, equipment, assemblies, bearings — with live severity, trend arrows, and drill-down to every reading.</p>
   <div class="shots">
-    <div class="shot"><div class="shot-placeholder">App screenshot — fleet overview<br>(being prepared)</div><div class="cap">The whole fleet, organized by equipment, severity at a glance.</div></div>
-    <div class="shot"><div class="shot-placeholder">App screenshot — FFT spectrum<br>(being prepared)</div><div class="cap">Full-resolution spectrum with harmonic ruler and axis switching.</div></div>
-    <div class="shot"><div class="shot-placeholder">App screenshot — trend view<br>(being prepared)</div><div class="cap">RMS and band trends over any window — the story of the machine.</div></div>
-    <div class="shot"><div class="shot-placeholder">App screenshot — waveform<br>(being prepared)</div><div class="cap">Raw time waveform, every stored sample on screen.</div></div>
-    <div class="shot"><div class="shot-placeholder">App screenshot — alerts<br>(being prepared)</div><div class="cap">Alert workflow: acknowledge, assign, resolve — with an audit trail.</div></div>
-    <div class="shot"><div class="shot-placeholder">App screenshot — mobile<br>(being prepared)</div><div class="cap">The same platform in your pocket, built for the plant floor.</div></div>
+    <div class="shot"><img src="images/shot-overview.png" alt="App screenshot — fleet overview" loading="lazy"><div class="cap">The whole fleet, organized by equipment, severity at a glance.</div></div>
+    <div class="shot"><img src="images/shot-fft.png" alt="App screenshot — FFT spectrum" loading="lazy"><div class="cap">Full-resolution spectrum with harmonic ruler and axis switching.</div></div>
+    <div class="shot"><img src="images/shot-trend.png" alt="App screenshot — trend view" loading="lazy"><div class="cap">RMS and band trends over any window — the story of the machine.</div></div>
+    <div class="shot"><img src="images/shot-waveform.png" alt="App screenshot — waveform" loading="lazy"><div class="cap">Raw time waveform, every stored sample on screen.</div></div>
+    <div class="shot"><img src="images/shot-alerts.png" alt="App screenshot — alerts" loading="lazy"><div class="cap">Alert workflow: acknowledge, assign, resolve — with an audit trail.</div></div>
+    <div class="shot phone"><img src="images/shot-mobile-sensor.png" alt="App screenshot — mobile" loading="lazy"><div class="cap">The same platform in your pocket, built for the plant floor.</div></div>
   </div>
 </section>
 

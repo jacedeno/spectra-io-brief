@@ -92,6 +92,9 @@
   .shot { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
   .shot img { width: 100%; height: auto; display: block; }
   .shot .cap { font-size: 13px; color: var(--muted); padding: 10px 14px; }
+  .shot.phone { display: flex; flex-direction: column; }
+  .shot.phone img { max-width: 260px; margin: 14px auto 0; border: 1px solid var(--line); border-radius: 12px; }
+  .shot.phone .cap { margin-top: auto; }
   .shot-placeholder {
     display: flex; align-items: center; justify-content: center; min-height: 190px;
     background: repeating-linear-gradient(45deg, #f4f2ec, #f4f2ec 12px, #faf8f3 12px, #faf8f3 24px);
@@ -260,12 +263,12 @@
   <h2>Todo lo que el equipo de mantenimiento necesita, en una URL.</h2>
   <p class="lead">Una vista de flota que se lee como tu planta — sitios, equipos, conjuntos, rodamientos — con severidad en vivo, flechas de tendencia y acceso directo a cada lectura.</p>
   <div class="shots">
-    <div class="shot"><div class="shot-placeholder">Captura de la app — vista de flota<br>(en preparación)</div><div class="cap">Toda la flota, organizada por equipo, con la severidad a simple vista.</div></div>
-    <div class="shot"><div class="shot-placeholder">Captura de la app — espectro FFT<br>(en preparación)</div><div class="cap">Espectro a resolución completa, con regla armónica y cambio de eje.</div></div>
-    <div class="shot"><div class="shot-placeholder">Captura de la app — tendencias<br>(en preparación)</div><div class="cap">Tendencias de RMS y bandas en cualquier ventana — la historia de la máquina.</div></div>
-    <div class="shot"><div class="shot-placeholder">Captura de la app — forma de onda<br>(en preparación)</div><div class="cap">Forma de onda cruda, con cada muestra almacenada en pantalla.</div></div>
-    <div class="shot"><div class="shot-placeholder">Captura de la app — alertas<br>(en preparación)</div><div class="cap">Flujo de alertas: reconocer, asignar, resolver — con traza de auditoría.</div></div>
-    <div class="shot"><div class="shot-placeholder">Captura de la app — móvil<br>(en preparación)</div><div class="cap">La misma plataforma en tu bolsillo, hecha para el piso de planta.</div></div>
+    <div class="shot"><img src="../images/shot-overview.png" alt="Captura de la app — vista de flota" loading="lazy"><div class="cap">Toda la flota, organizada por equipo, con la severidad a simple vista.</div></div>
+    <div class="shot"><img src="../images/shot-fft.png" alt="Captura de la app — espectro FFT" loading="lazy"><div class="cap">Espectro a resolución completa, con regla armónica y cambio de eje.</div></div>
+    <div class="shot"><img src="../images/shot-trend.png" alt="Captura de la app — tendencias" loading="lazy"><div class="cap">Tendencias de RMS y bandas en cualquier ventana — la historia de la máquina.</div></div>
+    <div class="shot"><img src="../images/shot-waveform.png" alt="Captura de la app — forma de onda" loading="lazy"><div class="cap">Forma de onda cruda, con cada muestra almacenada en pantalla.</div></div>
+    <div class="shot"><img src="../images/shot-alerts.png" alt="Captura de la app — alertas" loading="lazy"><div class="cap">Flujo de alertas: reconocer, asignar, resolver — con traza de auditoría.</div></div>
+    <div class="shot phone"><img src="../images/shot-mobile-sensor.png" alt="Captura de la app — móvil" loading="lazy"><div class="cap">La misma plataforma en tu bolsillo, hecha para el piso de planta.</div></div>
   </div>
 </section>
 

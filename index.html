@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spectra-IO — Wireless Vibration Monitoring &amp; FFT Diagnostics</title>
+<meta name="description" content="Wireless vibration sensors on your rotating equipment, live FFT spectra and alerts in your browser. No wires, no servers in your plant, no IT project. In production today.">
+<meta property="og:title" content="Spectra-IO — Wireless Vibration Monitoring">
+<meta property="og:description" content="Your machines announce their failures. Spectra-IO listens. Wireless sensors, analyst-grade FFT diagnostics, alerts on your phone — running in production today.">
+<meta property="og:image" content="https://jacedeno.github.io/spectra-io-brief/images/og.jpg">
+<meta property="og:url" content="https://jacedeno.github.io/spectra-io-brief/">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --ink: #1c2333;
+    --muted: #5c6670;
+    --paper: #fbfaf7;
+    --card: #ffffff;
+    --line: #e3e0d8;
+    --blue: #1d5fd6;
+    --blue-soft: #e9f0fc;
+    --accent: #b3591e;
+    --navy: #1a2456;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--paper); color: var(--ink); line-height: 1.55;
+  }
+  section {
+    max-width: 980px; margin: 0 auto; padding: 72px 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker {
+    font-size: 12px; font-weight: 700; letter-spacing: 2.2px;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+  }
+  h1 { font-size: clamp(30px, 5.4vw, 52px); line-height: 1.12; letter-spacing: -0.5px; }
+  h2 { font-size: clamp(24px, 3.6vw, 34px); line-height: 1.18; margin-bottom: 18px; letter-spacing: -0.3px; }
+  h3 { font-size: 17px; margin-bottom: 6px; }
+  p.lead { font-size: 18px; color: var(--muted); max-width: 62ch; }
+  p + p.lead, p.lead + p { margin-top: 12px; }
+  .muted { color: var(--muted); }
+  img.full { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); background: #fff; }
+  img.crop43 { aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 45%; }
+  .imgcap { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+  /* hero */
+  .hero { padding: 84px 28px 90px; border-bottom: 4px solid var(--blue); position: relative; }
+  .hero .brandrow { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 42px; flex-wrap: wrap; }
+  .hero .brandrow img { height: 40px; width: auto; }
+  .hero .byline { font-size: 13.5px; color: var(--muted); }
+  .hero .byline a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  .hero .byline a:hover { text-decoration: underline; }
+  .langlink {
+    position: absolute; top: 22px; right: 28px; font-size: 13.5px; font-weight: 600;
+    color: var(--navy); text-decoration: none; border: 1.5px solid var(--line);
+    border-radius: 999px; padding: 6px 14px; background: var(--card);
+  }
+  .langlink:hover { border-color: var(--blue); color: var(--blue); }
+
+  /* stat row */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 28px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  .stat .n { font-size: 30px; font-weight: 700; color: var(--blue); letter-spacing: -0.5px; }
+  .stat .l { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+
+  /* cards */
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 22px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+  .card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); }
+  .card p { font-size: 14.5px; color: var(--muted); margin-top: 6px; }
+  .card .big { font-size: 15.5px; color: var(--ink); font-weight: 600; margin-top: 8px; }
+
+  /* tables */
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: 14.5px; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+  th { background: var(--blue-soft); color: var(--blue); font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; }
+  tr:last-child td { border-bottom: none; }
+  td.win { font-weight: 700; color: var(--blue); }
+  .tablewrap { overflow-x: auto; }
+
+  ul.clean { margin: 16px 0 0; padding-left: 20px; }
+  ul.clean li { margin-bottom: 8px; }
+
+  .quote {
+    border-left: 4px solid var(--blue); background: var(--blue-soft);
+    padding: 18px 22px; border-radius: 0 10px 10px 0; margin-top: 22px; font-size: 16.5px;
+  }
+
+  .links a { color: var(--navy); text-decoration: none; font-weight: 600; }
+  .links a:hover { text-decoration: underline; }
+
+  /* screenshots */
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 22px; }
+  .shot { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .shot img { width: 100%; height: auto; display: block; }
+  .shot .cap { font-size: 13px; color: var(--muted); padding: 10px 14px; }
+  .shot-placeholder {
+    display: flex; align-items: center; justify-content: center; min-height: 190px;
+    background: repeating-linear-gradient(45deg, #f4f2ec, #f4f2ec 12px, #faf8f3 12px, #faf8f3 24px);
+    color: var(--muted); font-size: 13px; text-align: center; padding: 16px;
+  }
+
+  /* diagram */
+  .diagram { margin-top: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; overflow-x: auto; }
+  .diagram svg { display: block; min-width: 640px; width: 100%; height: auto; }
+
+  footer { text-align: center; padding: 48px 20px 64px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--navy); text-decoration: none; }
+  footer .name { font-size: 17px; font-weight: 700; color: var(--ink); }
+  footer .slogan { font-size: 15.5px; font-style: italic; color: var(--blue); margin: 6px 0 18px; }
+  .contactrow { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .contactrow a {
+    display: inline-block; padding: 9px 18px; border: 1.5px solid var(--line);
+    border-radius: 999px; background: var(--card); color: var(--ink);
+    font-weight: 600; font-size: 13.5px; text-decoration: none;
+  }
+  .contactrow a:hover { border-color: var(--blue); color: var(--blue); }
+
+  @media print {
+    section { padding: 28px 8px; break-inside: avoid; }
+    .hero { padding: 40px 8px; }
+    .langlink { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 · HERO -->
+<section class="hero">
+  <a class="langlink" href="es/">Español</a>
+  <div class="brandrow">
+    <img src="images/spectra-io-logo.png" alt="Spectra-IO">
+    <div class="byline">A product by <a href="https://excemca.com">excemca.com</a> · <a href="https://geekendzone.com">GeekendZone</a></div>
+  </div>
+  <div class="kicker">Wireless Vibration Monitoring · FFT Diagnostics</div>
+  <h1>Your machines announce their failures.<br>Spectra-IO listens.</h1>
+  <p class="lead" style="margin-top:18px;">Wireless vibration sensors on your rotating equipment. Live spectra, trends, and alerts in your browser and on your phone. Running in production today.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">2 orgs</div><div class="l">run Spectra-IO in production right now</div></div>
+    <div class="stat"><div class="n">4,000</div><div class="l">FFT bins per axis — analyst-grade spectra</div></div>
+    <div class="stat"><div class="n">Minutes</div><div class="l">to install each sensor — no wiring, no shutdown</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">IT projects — the system never touches your plant network</div></div>
+  </div>
+  <img class="full" style="margin-top:34px;" src="images/plant-night.jpg" alt="Industrial plant operating at night">
+  <p class="imgcap">Your plant runs around the clock. So does the monitoring.</p>
+</section>
+
+<!-- 2 · THE PROBLEM -->
+<section>
+  <div class="kicker">The problem</div>
+  <h2>The failure you didn't hear coming.</h2>
+  <p class="lead">Bearings and gearboxes don't fail all at once. They degrade quietly for weeks — and then let go in an afternoon. By the time a machine is loud enough or hot enough for a person to notice, the damage is done and the schedule is gone.</p>
+  <p class="lead">Monthly rounds with a portable data collector were designed for a different era. A reading every 30 days misses everything that happens in between — and one unplanned stop on a critical line costs more than years of monitoring it.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th></th><th>Monthly route with a collector</th><th>Spectra-IO, continuous</th></tr>
+    <tr><td><b>Readings per point</b></td><td>12 per year</td><td class="win">Every few hours, every day</td></tr>
+    <tr><td><b>Who climbs to the bearing</b></td><td>A technician, each time</td><td class="win">Nobody — the sensor lives there</td></tr>
+    <tr><td><b>The failure window</b></td><td>Often falls between visits</td><td class="win">Watched continuously, alarms included</td></tr>
+    <tr><td><b>Trend history</b></td><td>Sparse, hand-carried</td><td class="win">Automatic, complete, always online</td></tr>
+  </table>
+  </div>
+  <img class="full" style="margin-top:22px;" src="images/gears.jpg" alt="Close-up of industrial gears">
+  <div class="quote">Listening continuously beats measuring occasionally. The machine tells you what's coming — <b>if something is there to hear it</b>.</div>
+</section>
+
+<!-- 3 · THE SOLUTION -->
+<section>
+  <div class="kicker">The solution</div>
+  <h2>Stick a sensor on it. That's the install.</h2>
+  <img class="full crop43" src="images/sensor-closeup.jpg" alt="Wireless triaxial vibration sensor mounted on operating equipment">
+  <p class="imgcap">A wireless triaxial sensor mounted on operating equipment — cement dust and all. This is a real installation, not a studio shot.</p>
+  <div class="grid2">
+    <div class="card"><div class="tag">Sensors</div><p class="big">Wireless, triaxial, years on a battery</p><p>Industrial vibration + temperature sensors mount on a magnet or stud. No conduit, no cable tray, no electrician.</p></div>
+    <div class="card"><div class="tag">Gateway</div><p class="big">One power outlet — that's the requirement</p><p>Collects nearby sensors wirelessly and ships readings out over its own cellular link. Nothing plugs into your network.</p></div>
+    <div class="card"><div class="tag">Platform</div><p class="big">Trends, spectra, and health in one URL</p><p>Every machine, every sensor, every reading — organized by plant, equipment, and bearing, in any browser.</p></div>
+    <div class="card"><div class="tag">Alerts</div><p class="big">Threshold crossed → phone notified</p><p>Warning, alarm, and critical levels per measurement. When a machine changes behavior, the right people know.</p></div>
+  </div>
+</section>
+
+<!-- 4 · HOW IT WORKS -->
+<section>
+  <div class="kicker">Under the hood</div>
+  <h2>From the bearing to your browser.</h2>
+  <div class="diagram">
+    <svg viewBox="0 0 1000 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture: sensor to gateway to cellular to platform to browser">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d5fd6"/>
+        </marker>
+      </defs>
+      <g font-family="Helvetica, Arial, sans-serif">
+        <g>
+          <rect x="8" y="45" width="168" height="100" rx="10" fill="#e9f0fc" stroke="#1d5fd6" stroke-width="1.5"/>
+          <text x="92" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#1c2333">Wireless sensor</text>
+          <text x="92" y="107" text-anchor="middle" font-size="12" fill="#5c6670">on the bearing —</text>
+          <text x="92" y="123" text-anchor="middle" font-size="12" fill="#5c6670">vibration + temperature</text>
+        </g>
+        <line x1="180" y1="95" x2="206" y2="95" stroke="#1d5fd6" stroke-width="2" marker-end="url(#arr)"/>
+        <g>
+          <rect x="212" y="45" width="168" height="100" rx="10" fill="#ffffff" stroke="#1d5fd6" stroke-width="1.5"/>
+          <text x="296" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#1c2333">Gateway</text>
+          <text x="296" y="107" text-anchor="middle" font-size="12" fill="#5c6670">wireless in, cellular out —</text>
+          <text x="296" y="123" text-anchor="middle" font-size="12" fill="#5c6670">needs one power outlet</text>
+        </g>
+        <line x1="384" y1="95" x2="410" y2="95" stroke="#1d5fd6" stroke-width="2" marker-end="url(#arr)"/>
+        <g>
+          <rect x="416" y="45" width="168" height="100" rx="10" fill="#ffffff" stroke="#1d5fd6" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <text x="500" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#1c2333">Cellular 4G</text>
+          <text x="500" y="107" text-anchor="middle" font-size="12" fill="#5c6670">encrypted tunnel —</text>
+          <text x="500" y="123" text-anchor="middle" font-size="12" fill="#5c6670">zero open ports</text>
+        </g>
+        <line x1="588" y1="95" x2="614" y2="95" stroke="#1d5fd6" stroke-width="2" marker-end="url(#arr)"/>
+        <g>
+          <rect x="620" y="45" width="168" height="100" rx="10" fill="#1d5fd6" stroke="#1d5fd6" stroke-width="1.5"/>
+          <text x="704" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Spectra-IO</text>
+          <text x="704" y="107" text-anchor="middle" font-size="12" fill="#dbe7fb">storage, FFT analytics,</text>
+          <text x="704" y="123" text-anchor="middle" font-size="12" fill="#dbe7fb">thresholds, alerting</text>
+        </g>
+        <line x1="792" y1="95" x2="818" y2="95" stroke="#1d5fd6" stroke-width="2" marker-end="url(#arr)"/>
+        <g>
+          <rect x="824" y="45" width="168" height="100" rx="10" fill="#e9f0fc" stroke="#1d5fd6" stroke-width="1.5"/>
+          <text x="908" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#1c2333">Your browser</text>
+          <text x="908" y="107" text-anchor="middle" font-size="12" fill="#5c6670">and your phone —</text>
+          <text x="908" y="123" text-anchor="middle" font-size="12" fill="#5c6670">anywhere, HTTPS only</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <ul class="clean">
+    <li><b>The sensors talk to the gateway wirelessly</b> — short-range, low-power radio built for exactly this job.</li>
+    <li><b>The gateway brings its own internet</b> — a cellular link with an encrypted tunnel. Your firewall rules don't change, because nothing arrives at your firewall.</li>
+    <li><b>The platform does the heavy lifting</b> — storage, FFT analytics, thresholds, and alerting run outside your plant, maintained by us.</li>
+  </ul>
+  <div class="quote">Security teams love this architecture for what it <b>doesn't</b> do: it opens no ports, installs no servers, and never touches the plant network.</div>
+</section>
+
+<!-- 5 · SIMPLICITY -->
+<section>
+  <div class="kicker">Deployment</div>
+  <h2>No wires. No servers in your plant. No IT project.</h2>
+  <div class="grid2">
+    <div>
+      <img class="full crop43" src="images/sensor-bearing.jpg" alt="Sensor installed on a bearing housing">
+      <p class="imgcap">On the bearing housing, next to the grease lines — mounted in minutes on equipment that kept running.</p>
+    </div>
+    <div>
+      <img class="full crop43" src="images/sensor-screen-frame.jpg" alt="Sensor installed on a vibrating screen frame">
+      <p class="imgcap">On the frame of a vibrating screen — the kind of rough, dusty spot where wired instrumentation goes to die.</p>
+    </div>
+  </div>
+  <ul class="clean">
+    <li><b>Install:</b> mount the sensor, pair it, done. No shutdown required, no permits for hot work, no cable pulls.</li>
+    <li><b>Commission:</b> the gateway powers up and finds its way out over cellular on its own.</li>
+    <li><b>Operate:</b> open the URL. There is no client software, no VPN for users, nothing to patch on your side.</li>
+  </ul>
+  <div class="quote">The entire on-site footprint is <b>a sensor on a machine and a box on a wall</b>. Everything else is our problem — which is the point.</div>
+</section>
+
+<!-- 6 · THE PRODUCT -->
+<section>
+  <div class="kicker">The product</div>
+  <h2>Everything the maintenance team needs, one URL.</h2>
+  <p class="lead">A fleet view that reads like your plant — sites, equipment, assemblies, bearings — with live severity, trend arrows, and drill-down to every reading.</p>
+  <div class="shots">
+    <div class="shot"><div class="shot-placeholder">App screenshot — fleet overview<br>(being prepared)</div><div class="cap">The whole fleet, organized by equipment, severity at a glance.</div></div>
+    <div class="shot"><div class="shot-placeholder">App screenshot — FFT spectrum<br>(being prepared)</div><div class="cap">Full-resolution spectrum with harmonic ruler and axis switching.</div></div>
+    <div class="shot"><div class="shot-placeholder">App screenshot — trend view<br>(being prepared)</div><div class="cap">RMS and band trends over any window — the story of the machine.</div></div>
+    <div class="shot"><div class="shot-placeholder">App screenshot — waveform<br>(being prepared)</div><div class="cap">Raw time waveform, every stored sample on screen.</div></div>
+    <div class="shot"><div class="shot-placeholder">App screenshot — alerts<br>(being prepared)</div><div class="cap">Alert workflow: acknowledge, assign, resolve — with an audit trail.</div></div>
+    <div class="shot"><div class="shot-placeholder">App screenshot — mobile<br>(being prepared)</div><div class="cap">The same platform in your pocket, built for the plant floor.</div></div>
+  </div>
+</section>
+
+<!-- 7 · DEEP DIAGNOSTICS -->
+<section>
+  <div class="kicker">Deep diagnostics</div>
+  <h2>Analyst-grade FFT, every stored point on screen.</h2>
+  <p class="lead">Most dashboards decimate the spectrum to fit the screen and quietly throw away the resolution your analyst needs. Spectra-IO renders <b>every stored point</b> — up to 4,000 bins per axis, with native resolution kept where bearing analysis happens.</p>
+  <ul class="clean">
+    <li><b>Harmonic ruler</b> — anchor a base frequency and read its multiples straight off the spectrum.</li>
+    <li><b>Bearing fault frequencies</b> — configure the bearing and running speed, and the platform knows where BPFO, BPFI, BSF, and FTF should appear.</li>
+    <li><b>Hz and CPM, zoom bands, axis switching</b> — the workflow a vibration analyst actually uses, in a browser.</li>
+  </ul>
+  <div class="quote">This is the difference between "the app shows a chart" and <b>"the analyst can make the call from the chart."</b></div>
+</section>
+
+<!-- 8 · PROOF -->
+<section>
+  <div class="kicker">Proof</div>
+  <h2>Running today at an operating cement plant.</h2>
+  <p class="lead">Spectra-IO is not a prototype. It monitors rotating equipment at an operating cement plant — crushers, compressors, gearboxes — streaming readings around the clock over cellular, through dust that eats lesser hardware for breakfast.</p>
+  <p class="lead">Two organizations use the platform in production today. The system has survived contact with the real world: heat, dust, vibration, and the industrial network conditions that kill demo-grade solutions.</p>
+  <img class="full" style="margin-top:22px;" src="images/cement-plant.jpg" alt="Cement plant structures">
+  <div class="quote">The best reference for an industrial product is simple: <b>it is already doing the job, somewhere real.</b></div>
+</section>
+
+<!-- 9 · EXPANSION -->
+<section>
+  <div class="kicker">Where it goes next</div>
+  <h2>From the plant floor to the oil field.</h2>
+  <p class="lead">Inside a plant, sensors sit close together and one gateway covers them. But a lot of critical equipment doesn't live in a plant — it's scattered across kilometers: <b>well clusters, pump stations, remote skids</b>.</p>
+  <p class="lead">That's a radio problem, and the platform is ready for it. With long-range LoRaWAN nodes, a handful of gateways can cover an entire field of dispersed assets — years of battery per node, no SIM card per machine, no trenching. The platform ingests standard MQTT either way: <b>the radio is an interchangeable detail, not a new system.</b></p>
+  <div class="grid2">
+    <div>
+      <img class="full crop43" src="images/pumpjack.jpg" alt="Oil pumpjack at sunset">
+      <p class="imgcap">Dispersed extraction assets — exactly what long-range, low-power radio was designed for.</p>
+    </div>
+    <div>
+      <img class="full crop43" src="images/refinery-piping.jpg" alt="Refinery piping network">
+      <p class="imgcap">The same platform, the same dashboards — from a single plant to an entire field.</p>
+    </div>
+  </div>
+  <div class="quote">One platform, many radios: monitor the compressor room today and the well cluster tomorrow — <b>without buying a second system.</b></div>
+</section>
+
+<!-- 10 · CTA -->
+<section>
+  <div class="kicker">Next step</div>
+  <h2>See your own plant in it.</h2>
+  <p class="lead">The fastest way to evaluate Spectra-IO is a pilot: a few sensors on the machines that worry you most, one gateway, and your data flowing within days — <b>weeks, not months, to a decision.</b></p>
+  <ul class="clean">
+    <li><b>You pick the machines</b> — the ones whose failure hurts.</li>
+    <li><b>We install and commission</b> — minutes per sensor, no shutdown.</li>
+    <li><b>You watch your own data</b> — trends, spectra, and alerts on your equipment, not a demo dataset.</li>
+  </ul>
+  <img class="full" style="margin-top:22px;" src="images/factory-interior.jpg" alt="Industrial plant interior">
+  <div class="quote">Ask for a pilot and put the platform where it belongs: <b>on your machines.</b></div>
+</section>
+
+<footer>
+  <img src="images/spectra-io-logo.png" alt="Spectra-IO" style="height:34px;width:auto;margin-bottom:10px;">
+  <div class="slogan">Hear the failure before it happens.</div>
+  <div class="contactrow">
+    <a href="mailto:joseangel.cedeno@gmail.com">✉&nbsp; joseangel.cedeno@gmail.com</a>
+    <a href="https://excemca.com">excemca.com</a>
+    <a href="https://geekendzone.com">GeekendZone</a>
+  </div>
+  <div style="margin-top:18px;">A product by <a href="https://excemca.com">Excemca</a> · <a href="https://geekendzone.com">GeekendZone</a> — San Antonio, Texas</div>
+</footer>
+
+</body>
+</html>

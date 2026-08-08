@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spectra-IO — Monitoreo Inalámbrico de Vibración y Diagnóstico FFT</title>
-<meta name="description" content="Sensores inalámbricos de vibración en tus equipos rotativos, espectros FFT y alertas en vivo en tu navegador. Sin cables, sin servidores en tu planta, sin proyecto de IT. En producción hoy.">
+<meta name="description" content="Sensores inalámbricos de vibración en tus equipos rotativos; espectros FFT y alertas en tiempo real en tu navegador. Sin cables, sin servidores en tu planta y sin proyectos de TI. Operando en producción hoy.">
 <meta property="og:title" content="Spectra-IO — Monitoreo Inalámbrico de Vibración">
-<meta property="og:description" content="Tus máquinas anuncian sus fallas. Spectra-IO las escucha. Sensores inalámbricos, diagnóstico FFT de nivel analista, alertas en tu teléfono — en producción hoy.">
+<meta property="og:description" content="Tus máquinas anuncian sus fallas. Spectra-IO las escucha. Sensores inalámbricos, diagnóstico FFT con calidad de analista y alertas en tu teléfono — operando en producción hoy.">
 <meta property="og:image" content="https://jacedeno.github.io/spectra-io-brief/images/og.jpg">
 <meta property="og:url" content="https://jacedeno.github.io/spectra-io-brief/es/">
 <meta property="og:type" content="website">
@@ -46,6 +46,7 @@
   img.crop43 { aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 45%; }
   .imgcap { font-size: 13px; color: var(--muted); margin-top: 8px; }
 
+  /* hero */
   .hero { padding: 84px 28px 90px; border-bottom: 4px solid var(--blue); position: relative; }
   .hero .brandrow { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 42px; flex-wrap: wrap; }
   .hero .brandrow img { height: 40px; width: auto; }
@@ -59,17 +60,20 @@
   }
   .langlink:hover { border-color: var(--blue); color: var(--blue); }
 
+  /* stat row */
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 28px; }
   .stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
   .stat .n { font-size: 30px; font-weight: 700; color: var(--blue); letter-spacing: -0.5px; }
   .stat .l { font-size: 13.5px; color: var(--muted); margin-top: 4px; }
 
+  /* cards */
   .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 22px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
   .card .tag { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); }
   .card p { font-size: 14.5px; color: var(--muted); margin-top: 6px; }
   .card .big { font-size: 15.5px; color: var(--ink); font-weight: 600; margin-top: 8px; }
 
+  /* tables */
   table { width: 100%; border-collapse: collapse; margin-top: 20px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: 14.5px; }
   th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); }
   th { background: var(--blue-soft); color: var(--blue); font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; }
@@ -88,6 +92,7 @@
   .links a { color: var(--navy); text-decoration: none; font-weight: 600; }
   .links a:hover { text-decoration: underline; }
 
+  /* screenshots */
   .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 22px; }
   .shot { background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
   .shot img { width: 100%; height: auto; display: block; }
@@ -101,6 +106,7 @@
     color: var(--muted); font-size: 13px; text-align: center; padding: 16px;
   }
 
+  /* diagram */
   .diagram { margin-top: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; overflow-x: auto; }
   .diagram svg { display: block; min-width: 640px; width: 100%; height: auto; }
 
@@ -134,56 +140,56 @@
   </div>
   <div class="kicker">Monitoreo Inalámbrico de Vibración · Diagnóstico FFT</div>
   <h1>Tus máquinas anuncian sus fallas.<br>Spectra-IO las escucha.</h1>
-  <p class="lead" style="margin-top:18px;">Sensores inalámbricos de vibración en tus equipos rotativos. Espectros, tendencias y alertas en vivo, en tu navegador y en tu teléfono. En producción hoy.</p>
+  <p class="lead" style="margin-top:18px;">Sensores inalámbricos de vibración en tus equipos rotativos. Espectros, tendencias y alarmas en tiempo real en tu navegador y en tu teléfono. Operando en producción hoy.</p>
   <div class="stats">
-    <div class="stat"><div class="n">2 org.</div><div class="l">operan Spectra-IO en producción ahora mismo</div></div>
-    <div class="stat"><div class="n">4,000</div><div class="l">bins de FFT por eje — espectros de nivel analista</div></div>
-    <div class="stat"><div class="n">Minutos</div><div class="l">para instalar cada sensor — sin cableado, sin parar el equipo</div></div>
-    <div class="stat"><div class="n">0</div><div class="l">proyectos de IT — el sistema nunca toca la red de tu planta</div></div>
+    <div class="stat"><div class="n">2 orgs.</div><div class="l">operan Spectra-IO en producción actualmente</div></div>
+    <div class="stat"><div class="n">4,000</div><div class="l">bins de FFT por eje — espectros con calidad de analista</div></div>
+    <div class="stat"><div class="n">Minutos</div><div class="l">para instalar cada sensor — sin cableado, sin paradas de planta</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">proyectos de TI — el sistema jamás interfiere con la red de tu planta</div></div>
   </div>
   <img class="full" style="margin-top:34px;" src="../images/plant-night.jpg" alt="Planta industrial operando de noche">
   <p class="imgcap">Tu planta trabaja las 24 horas. El monitoreo también.</p>
 </section>
 
-<!-- 2 · EL PROBLEMA -->
+<!-- 2 · THE PROBLEM -->
 <section>
   <div class="kicker">El problema</div>
-  <h2>La falla que nadie oyó venir.</h2>
-  <p class="lead">Los rodamientos y las cajas reductoras no fallan de golpe. Se degradan en silencio durante semanas — y se van en una tarde. Cuando la máquina ya suena o calienta lo suficiente para que alguien lo note, el daño está hecho y el programa de producción también.</p>
-  <p class="lead">La ronda mensual con colector portátil se diseñó para otra época. Una medición cada 30 días se pierde todo lo que pasa en el medio — y una sola parada no planificada en una línea crítica cuesta más que años de monitorearla.</p>
+  <h2>La falla que nadie vio venir.</h2>
+  <p class="lead">Los rodamientos y las cajas reductoras no fallan de forma súbita; se degradan silenciosamente durante semanas y colapsan en pocas horas. Cuando la máquina genera suficiente ruido o temperatura para que alguien lo note, el daño y el programa de producción ya se han perdido.</p>
+  <p class="lead">Las rondas mensuales con colectores portátiles se diseñaron para otra época. Una lectura cada 30 días pasa por alto todo lo que ocurre en el intervalo, y una sola parada no planificada en una línea crítica cuesta más que años de monitoreo continuo.</p>
   <div class="tablewrap">
   <table>
     <tr><th></th><th>Ronda mensual con colector</th><th>Spectra-IO, continuo</th></tr>
-    <tr><td><b>Mediciones por punto</b></td><td>12 al año</td><td class="win">Cada pocas horas, todos los días</td></tr>
-    <tr><td><b>Quién sube hasta el rodamiento</b></td><td>Un técnico, cada vez</td><td class="win">Nadie — el sensor vive ahí</td></tr>
-    <tr><td><b>La ventana de falla</b></td><td>Suele caer entre visitas</td><td class="win">Vigilada continuamente, con alarmas</td></tr>
-    <tr><td><b>Historial de tendencia</b></td><td>Escaso, cargado a mano</td><td class="win">Automático, completo, siempre en línea</td></tr>
+    <tr><td><b>Mediciones por punto</b></td><td>12 al año</td><td class="win">Continuas, múltiples veces al día</td></tr>
+    <tr><td><b>Quién revisa el rodamiento</b></td><td>Un técnico en cada visita</td><td class="win">Nadie — el sensor permanece fijo en sitio</td></tr>
+    <tr><td><b>Ventana de falla</b></td><td>Suele manifestarse entre visitas</td><td class="win">Monitoreo continuo con sistema de alarmas</td></tr>
+    <tr><td><b>Historial de tendencia</b></td><td>Escaso e ingresado manualmente</td><td class="win">Automático, completo y siempre en línea</td></tr>
   </table>
   </div>
-  <img class="full" style="margin-top:22px;" src="../images/gears.jpg" alt="Engranajes industriales en primer plano">
-  <div class="quote">Escuchar continuamente le gana a medir de vez en cuando. La máquina avisa lo que viene — <b>si hay algo ahí para oírla</b>.</div>
+  <img class="full" style="margin-top:22px;" src="../images/gears.jpg" alt="Primer plano de engranajes industriales">
+  <div class="quote">El monitoreo continuo supera con creces a la medición intermitente. La máquina advierte lo que se aproxima — <b>siempre y cuando exista la tecnología adecuada para registrarlo</b>.</div>
 </section>
 
-<!-- 3 · LA SOLUCIÓN -->
+<!-- 3 · THE SOLUTION -->
 <section>
   <div class="kicker">La solución</div>
-  <h2>Pega el sensor a la máquina. Esa es toda la instalación.</h2>
-  <img class="full crop43" src="../images/sensor-closeup.jpg" alt="Sensor triaxial inalámbrico montado en equipo en operación">
-  <p class="imgcap">Un sensor triaxial inalámbrico montado en equipo operando — con el polvo de cemento encima. Instalación real, no foto de estudio.</p>
+  <h2>Fija el sensor a la máquina. Ese es todo el proceso de instalación.</h2>
+  <img class="full crop43" src="../images/sensor-closeup.jpg" alt="Sensor triaxial inalámbrico montado en un equipo en operación">
+  <p class="imgcap">Sensor triaxial inalámbrico montado en un equipo en operación — con todo y polvo de cemento. Esta es una instalación real, no una fotografía de estudio.</p>
   <div class="grid2">
-    <div class="card"><div class="tag">Sensores</div><p class="big">Inalámbricos, triaxiales, años con una batería</p><p>Sensores industriales de vibración + temperatura que se montan con magneto o espárrago. Sin tubería eléctrica, sin bandeja de cables, sin electricista.</p></div>
-    <div class="card"><div class="tag">Gateway</div><p class="big">Un tomacorriente — ese es el requisito</p><p>Recoge los sensores cercanos por radio y envía las lecturas por su propio enlace celular. Nada se conecta a tu red.</p></div>
-    <div class="card"><div class="tag">Plataforma</div><p class="big">Tendencias, espectros y salud en una sola URL</p><p>Cada máquina, cada sensor, cada lectura — organizados por planta, equipo y rodamiento, en cualquier navegador.</p></div>
-    <div class="card"><div class="tag">Alertas</div><p class="big">Umbral cruzado → teléfono notificado</p><p>Niveles de advertencia, alarma y crítico por medición. Cuando una máquina cambia de comportamiento, la gente correcta se entera.</p></div>
+    <div class="card"><div class="tag">Sensores</div><p class="big">Inalámbricos, triaxiales, años de autonomía</p><p>Sensores industriales de vibración y temperatura que se montan mediante base magnética o espárrago. Sin ductos eléctricos, sin charolas de cables y sin electricistas.</p></div>
+    <div class="card"><div class="tag">Gateway</div><p class="big">Un tomacorriente estándar — ese es el único requisito</p><p>Recoge los datos de los sensores cercanos por radiofrecuencia y los transmite mediante su propio enlace celular. Ningún dispositivo se conecta a tu red.</p></div>
+    <div class="card"><div class="tag">Plataforma</div><p class="big">Tendencias, espectros y estado en una sola URL</p><p>Cada máquina, cada sensor y cada lectura organizados por planta, equipo y rodamiento en cualquier navegador.</p></div>
+    <div class="card"><div class="tag">Alertas</div><p class="big">Umbral superado → notificación al teléfono</p><p>Niveles de advertencia, alarma y crítico por medición. Cuando una máquina cambia de comportamiento, el personal adecuado se entera de inmediato.</p></div>
   </div>
 </section>
 
-<!-- 4 · CÓMO FUNCIONA -->
+<!-- 4 · HOW IT WORKS -->
 <section>
-  <div class="kicker">Por dentro</div>
+  <div class="kicker">Arquitectura interna</div>
   <h2>Del rodamiento a tu navegador.</h2>
   <div class="diagram">
-    <svg viewBox="0 0 1000 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arquitectura: sensor a gateway a celular a plataforma a navegador">
+    <svg viewBox="0 0 1000 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arquitectura: del sensor al gateway, transmisión celular, plataforma y navegador">
       <defs>
         <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
           <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d5fd6"/>
@@ -200,8 +206,8 @@
         <g>
           <rect x="212" y="45" width="168" height="100" rx="10" fill="#ffffff" stroke="#1d5fd6" stroke-width="1.5"/>
           <text x="296" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#1c2333">Gateway</text>
-          <text x="296" y="107" text-anchor="middle" font-size="12" fill="#5c6670">radio adentro, celular afuera —</text>
-          <text x="296" y="123" text-anchor="middle" font-size="12" fill="#5c6670">necesita un tomacorriente</text>
+          <text x="296" y="107" text-anchor="middle" font-size="12" fill="#5c6670">radio interno, celular externo —</text>
+          <text x="296" y="123" text-anchor="middle" font-size="12" fill="#5c6670">requiere un tomacorriente</text>
         </g>
         <line x1="384" y1="95" x2="410" y2="95" stroke="#1d5fd6" stroke-width="2" marker-end="url(#arr)"/>
         <g>
@@ -215,119 +221,119 @@
           <rect x="620" y="45" width="168" height="100" rx="10" fill="#1d5fd6" stroke="#1d5fd6" stroke-width="1.5"/>
           <text x="704" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Spectra-IO</text>
           <text x="704" y="107" text-anchor="middle" font-size="12" fill="#dbe7fb">almacenamiento, análisis FFT,</text>
-          <text x="704" y="123" text-anchor="middle" font-size="12" fill="#dbe7fb">umbrales, alertas</text>
+          <text x="704" y="123" text-anchor="middle" font-size="12" fill="#dbe7fb">umbralización y alertas</text>
         </g>
         <line x1="792" y1="95" x2="818" y2="95" stroke="#1d5fd6" stroke-width="2" marker-end="url(#arr)"/>
         <g>
           <rect x="824" y="45" width="168" height="100" rx="10" fill="#e9f0fc" stroke="#1d5fd6" stroke-width="1.5"/>
           <text x="908" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#1c2333">Tu navegador</text>
           <text x="908" y="107" text-anchor="middle" font-size="12" fill="#5c6670">y tu teléfono —</text>
-          <text x="908" y="123" text-anchor="middle" font-size="12" fill="#5c6670">desde donde sea, solo HTTPS</text>
+          <text x="908" y="123" text-anchor="middle" font-size="12" fill="#5c6670">desde cualquier lugar, solo HTTPS</text>
         </g>
       </g>
     </svg>
   </div>
   <ul class="clean">
-    <li><b>Los sensores hablan con el gateway por radio</b> — corto alcance y bajo consumo, hecho exactamente para este trabajo.</li>
-    <li><b>El gateway trae su propio internet</b> — un enlace celular con túnel cifrado. Las reglas de tu firewall no cambian, porque nada llega a tu firewall.</li>
-    <li><b>La plataforma hace el trabajo pesado</b> — almacenamiento, análisis FFT, umbrales y alertas corren fuera de tu planta, mantenidos por nosotros.</li>
+    <li><b>Los sensores se comunican con el gateway de forma inalámbrica</b> mediante radiofrecuencia de corto alcance y bajo consumo, diseñada específicamente para esta aplicación.</li>
+    <li><b>El gateway integra su propia conectividad a internet</b> a través de un enlace celular con túnel cifrado. Las reglas de tu cortafuegos (*firewall*) permanecen intactas, ya que ningún tráfico externo ingresa a la red.</li>
+    <li><b>La plataforma ejecuta el procesamiento complejo</b> —el almacenamiento, el análisis FFT, la gestión de umbrales y el sistema de alertas operan fuera de tu planta y cuentan con nuestro mantenimiento continuo.</li>
   </ul>
-  <div class="quote">A los equipos de seguridad esta arquitectura les encanta por lo que <b>no</b> hace: no abre puertos, no instala servidores y jamás toca la red de la planta.</div>
+  <div class="quote">Los equipos de seguridad informática valoran positivamente esta arquitectura por lo que <b>omite</b>: no abre puertos, no requiere servidores locales y nunca interfiere con la red de la planta.</div>
 </section>
 
-<!-- 5 · SIMPLICIDAD -->
+<!-- 5 · SIMPLICITY -->
 <section>
   <div class="kicker">Despliegue</div>
-  <h2>Sin cables. Sin servidores en tu planta. Sin proyecto de IT.</h2>
+  <h2>Sin cables. Sin servidores locales en tu planta. Sin proyectos de TI.</h2>
   <div class="grid2">
     <div>
-      <img class="full crop43" src="../images/sensor-bearing.jpg" alt="Sensor instalado en una chumacera">
-      <p class="imgcap">En la chumacera, junto a las líneas de grasa — montado en minutos con el equipo trabajando.</p>
+      <img class="full crop43" src="../images/sensor-bearing.jpg" alt="Sensor instalado en el alojamiento de un rodamiento">
+      <p class="imgcap">En la chumacera, junto a las líneas de grasa — instalado en cuestión de minutos con el equipo en funcionamiento.</p>
     </div>
     <div>
       <img class="full crop43" src="../images/sensor-screen-frame.jpg" alt="Sensor instalado en el marco de una zaranda vibratoria">
-      <p class="imgcap">En el marco de una zaranda vibratoria — el tipo de rincón rudo y polvoriento donde la instrumentación cableada va a morir.</p>
+      <p class="imgcap">En el marco de una zaranda vibratoria — el tipo de entorno hostil y polvoriento donde la instrumentación cableada suele fallar.</p>
     </div>
   </div>
-  <img class="full" style="margin-top:22px;" src="../images/gateway-panel.jpg" alt="Tablero del gateway: tarjeta CTC, router celular y alimentación en una sola caja">
-  <p class="imgcap">Todo el "cuarto de servidores": una caja con la tarjeta del gateway, el router celular y la alimentación. Esta es la caja en la pared.</p>
+  <img class="full" style="margin-top:22px;" src="../images/gateway-panel.jpg" alt="Gabinete del gateway: tarjeta CTC, router celular y fuente de poder en una sola caja">
+  <p class="imgcap">Todo el "cuarto de servidores": un gabinete que integra la tarjeta del gateway, el router celular y la fuente de alimentación. Esta es la única caja instalada en la pared.</p>
   <ul class="clean">
-    <li><b>Instalar:</b> montar el sensor, emparejarlo, listo. Sin parada de equipo, sin permisos de trabajo en caliente, sin tendido de cables.</li>
-    <li><b>Comisionar:</b> el gateway se enciende y sale solo por celular.</li>
-    <li><b>Operar:</b> abre la URL. No hay software cliente, no hay VPN para los usuarios, nada que parchar de tu lado.</li>
+    <li><b>Instalación:</b> monta el sensor, vincúlalo y listo. Sin paradas de equipo, sin permisos de trabajo en caliente y sin tendido de cables.</li>
+    <li><b>Comisionamiento:</b> el gateway se enciende y establece su enlace celular de manera completamente autónoma.</li>
+    <li><b>Operación:</b> accede a través de la URL. No requiere software cliente, ni VPN para los usuarios, ni parches de seguridad de tu lado.</li>
   </ul>
-  <div class="quote">Toda la huella en sitio es <b>un sensor en la máquina y una caja en la pared</b>. Lo demás es problema nuestro — y esa es justamente la idea.</div>
+  <div class="quote">Toda la infraestructura física en sitio se reduce a <b>un sensor en la máquina y una caja en la pared</b>. El resto corre por nuestra cuenta — y esa es precisamente la idea.</div>
 </section>
 
-<!-- 6 · EL PRODUCTO -->
+<!-- 6 · THE PRODUCT -->
 <section>
   <div class="kicker">El producto</div>
-  <h2>Todo lo que el equipo de mantenimiento necesita, en una URL.</h2>
-  <p class="lead">Una vista de flota que se lee como tu planta — sitios, equipos, conjuntos, rodamientos — con severidad en vivo, flechas de tendencia y acceso directo a cada lectura.</p>
+  <h2>Todo lo que el equipo de mantenimiento necesita, en una sola URL.</h2>
+  <p class="lead">Una vista de flota estructurada al modelo de tu planta —sitios, equipos, conjuntos y rodamientos— con indicadores de severidad en tiempo real, flechas de tendencia y acceso detallado a cada lectura.</p>
   <div class="shots">
-    <div class="shot"><img src="../images/shot-overview.png" alt="Captura de la app — vista de flota" loading="lazy"><div class="cap">Toda la flota, organizada por equipo, con la severidad a simple vista.</div></div>
-    <div class="shot"><img src="../images/shot-fft.png" alt="Captura de la app — espectro FFT" loading="lazy"><div class="cap">Espectro a resolución completa, con regla armónica y cambio de eje.</div></div>
-    <div class="shot"><img src="../images/shot-trend.png" alt="Captura de la app — tendencias" loading="lazy"><div class="cap">Tendencias de RMS y bandas en cualquier ventana — la historia de la máquina.</div></div>
-    <div class="shot"><img src="../images/shot-waveform.png" alt="Captura de la app — forma de onda" loading="lazy"><div class="cap">Forma de onda cruda, con cada muestra almacenada en pantalla.</div></div>
-    <div class="shot"><img src="../images/shot-alerts.png" alt="Captura de la app — alertas" loading="lazy"><div class="cap">Flujo de alertas: reconocer, asignar, resolver — con traza de auditoría.</div></div>
-    <div class="shot phone"><img src="../images/shot-mobile-sensor.png" alt="Captura de la app — móvil" loading="lazy"><div class="cap">La misma plataforma en tu bolsillo, hecha para el piso de planta.</div></div>
+    <div class="shot"><img src="../images/shot-overview.png" alt="Captura de pantalla de la app — vista general de la flota" loading="lazy"><div class="cap">Toda la flota organizada por equipos, con la severidad visible de un vistazo.</div></div>
+    <div class="shot"><img src="../images/shot-fft.png" alt="Captura de pantalla de la app — espectro FFT" loading="lazy"><div class="cap">Espectro a resolución completa con regla armónica y conmutación de ejes.</div></div>
+    <div class="shot"><img src="../images/shot-trend.png" alt="Captura de pantalla de la app — vista de tendencias" loading="lazy"><div class="cap">Tendencias de RMS y bandas en cualquier ventana temporal — el historial operativo de la máquina.</div></div>
+    <div class="shot"><img src="../images/shot-waveform.png" alt="Captura de pantalla de la app — forma de onda" loading="lazy"><div class="cap">Forma de onda cruda en el dominio del tiempo, con cada muestra almacenada visible en pantalla.</div></div>
+    <div class="shot"><img src="../images/shot-alerts.png" alt="Captura de pantalla de la app — gestión de alertas" loading="lazy"><div class="cap">Flujo de alertas: reconocimiento, asignación y resolución con trazabilidad de auditoría.</div></div>
+    <div class="shot phone"><img src="../images/shot-mobile-sensor.png" alt="Captura de pantalla de la app — versión móvil" loading="lazy"><div class="cap">La misma plataforma en la palma de tu mano, diseñada para el piso de planta.</div></div>
   </div>
 </section>
 
-<!-- 7 · DIAGNÓSTICO PROFUNDO -->
+<!-- 7 · DEEP DIAGNOSTICS -->
 <section>
-  <div class="kicker">Diagnóstico profundo</div>
-  <h2>FFT de nivel analista, con cada punto almacenado en pantalla.</h2>
-  <p class="lead">La mayoría de los dashboards decima el espectro para que quepa en la pantalla y descarta en silencio la resolución que tu analista necesita. Spectra-IO dibuja <b>cada punto almacenado</b> — hasta 4,000 bins por eje, conservando la resolución nativa donde se hace el análisis de rodamientos.</p>
+  <div class="kicker">Diagnóstico avanzado</div>
+  <h2>FFT con calidad de analista y cada punto almacenado en pantalla.</h2>
+  <p class="lead">La mayoría de los paneles de control convencionales submuestrea el espectro para ajustarlo a la interfaz, descartando de manera imperceptible la resolución que el especialista requiere. Spectra-IO procesa y renderiza <b>cada punto almacenado</b> —hasta 4,000 bins por eje—, preservando la resolución nativa indispensable para el análisis de rodamientos.</p>
   <ul class="clean">
-    <li><b>Regla armónica</b> — ancla una frecuencia base y lee sus múltiplos directamente sobre el espectro.</li>
-    <li><b>Frecuencias de falla de rodamiento</b> — configura el rodamiento y la velocidad de giro, y la plataforma sabe dónde deben aparecer BPFO, BPFI, BSF y FTF.</li>
-    <li><b>Hz y CPM, bandas de zoom, cambio de eje</b> — el flujo de trabajo que un analista de vibración usa de verdad, en un navegador.</li>
+    <li><b>Regla armónica:</b> permite anclar una frecuencia base y leer sus múltiplos directamente sobre el espectro.</li>
+    <li><b>Frecuencias características de rodamientos:</b> al configurar el rodamiento y la velocidad de operación, la plataforma determina automáticamente la ubicación teórica de las frecuencias BPFO, BPFI, BSF y FTF.</li>
+    <li><b>Herramientas profesionales:</b> visualización en Hz o CPM, bandas de zoom y conmutación de ejes; el flujo de trabajo que un analista de vibración utiliza en su día a día, accesible desde cualquier navegador.</li>
   </ul>
-  <div class="quote">Esta es la diferencia entre "la app muestra una gráfica" y <b>"el analista puede tomar la decisión desde la gráfica."</b></div>
+  <div class="quote">Esta es la diferencia entre una aplicación que solo muestra una gráfica y <b>una herramienta que permite al analista tomar decisiones fundamentadas a partir de ella</b>.</div>
 </section>
 
-<!-- 8 · PRUEBA -->
+<!-- 8 · PROOF -->
 <section>
-  <div class="kicker">Prueba</div>
-  <h2>Operando hoy en una planta de cemento activa.</h2>
-  <p class="lead">Spectra-IO no es un prototipo. Monitorea equipos rotativos en una planta de cemento en operación — trituradoras, compresores, reductores — transmitiendo lecturas las 24 horas por celular, en medio de un polvo que se desayuna al hardware débil.</p>
-  <p class="lead">Dos organizaciones usan la plataforma en producción hoy. El sistema ya sobrevivió al mundo real: calor, polvo, vibración y las condiciones de red industrial que matan a las soluciones de demo.</p>
-  <img class="full" style="margin-top:22px;" src="../images/cement-plant.jpg" alt="Estructuras de una planta de cemento">
-  <div class="quote">La mejor referencia de un producto industrial es simple: <b>ya está haciendo el trabajo, en un lugar real.</b></div>
+  <div class="kicker">Validación en campo</div>
+  <h2>Operando actualmente en una planta de cemento activa.</h2>
+  <p class="lead">Spectra-IO no es un prototipo. Monitorea equipos rotativos en una planta de cemento en operación —trituradoras, compresores y reductores— transmitiendo lecturas las 24 horas a través de redes celulares y soportando condiciones severas de polvo, calor y vibración.</p>
+  <p class="lead">Dos organizaciones utilizan la plataforma en producción hoy en día. El sistema ha superado la prueba del mundo real: altas temperaturas, polvo denso, vibración constante y las complejas condiciones de red industrial que suelen bloquear a las soluciones de demostración.</p>
+  <img class="full" style="margin-top:22px;" src="../images/cement-plant.jpg" alt="Instalaciones de una planta de cemento">
+  <div class="quote">La mejor referencia para un producto industrial es simple: <b>ya está realizando el trabajo en un entorno real.</b></div>
 </section>
 
-<!-- 9 · EXPANSIÓN -->
+<!-- 9 · EXPANSION -->
 <section>
-  <div class="kicker">Hacia dónde va</div>
-  <h2>Del piso de planta al campo petrolero.</h2>
-  <p class="lead">Dentro de una planta los sensores están cerca y un gateway los cubre. Pero mucho equipo crítico no vive en una planta — está regado en kilómetros: <b>macoyas de pozos, estaciones de bombeo, patines remotos</b>.</p>
-  <p class="lead">Ese es un problema de radio, y la plataforma está lista para él. Con nodos LoRaWAN de largo alcance, un puñado de gateways cubre un campo entero de activos dispersos — años de batería por nodo, sin SIM por máquina, sin zanjas. La plataforma ingiere MQTT estándar en ambos casos: <b>el radio es un detalle intercambiable, no un sistema nuevo.</b></p>
+  <div class="kicker">Hacia dónde se expande</div>
+  <h2>De la planta industrial al sector petrolero.</h2>
+  <p class="lead">Dentro de una planta centralizada, los sensores se encuentran próximos y un solo gateway los cubre. Sin embargo, gran parte de los equipos críticos no se localizan en un recinto cerrado, sino que están distribuidos a lo largo de kilómetros: <b>macoyas de perforación, estaciones de bombeo y patines remotos</b>.</p>
+  <p class="lead">Este es un desafío de radiocomunicación que la plataforma resuelve por completo. Mediante nodos LoRaWAN de largo alcance, un número reducido de gateways puede cubrir un campo completo de activos dispersos, ofreciendo años de autonomía por nodo, sin necesidad de una tarjeta SIM por máquina y sin requerir zanjas u obra civil. La plataforma procesa protocolos MQTT estándar en ambos escenarios: <b>la tecnología de radio es un componente intercambiable y no un sistema nuevo.</b></p>
   <div class="grid2">
     <div>
-      <img class="full crop43" src="../images/pumpjack.jpg" alt="Balancín petrolero al atardecer">
-      <p class="imgcap">Activos de extracción dispersos — exactamente para lo que se diseñó el radio de largo alcance y bajo consumo.</p>
+      <img class="full crop43" src="../images/pumpjack.jpg" alt="Balancín de extracción petrolera al atardecer">
+      <p class="imgcap">Activos de extracción dispersos — exactamente para lo que fue diseñada la radiocomunicación de largo alcance y bajo consumo.</p>
     </div>
     <div>
-      <img class="full crop43" src="../images/refinery-piping.jpg" alt="Red de tuberías de refinería">
-      <p class="imgcap">La misma plataforma, los mismos tableros — de una sola planta a un campo completo.</p>
+      <img class="full crop43" src="../images/refinery-piping.jpg" alt="Red de tuberías en una refinería">
+      <p class="imgcap">La misma plataforma y los mismos tableros de control — desde una planta individual hasta un campo petrolero completo.</p>
     </div>
   </div>
-  <div class="quote">Una plataforma, muchos radios: monitorea la sala de compresores hoy y la macoya mañana — <b>sin comprar un segundo sistema.</b></div>
+  <div class="quote">Una plataforma, múltiples tecnologías de radio: monitorea la sala de compresores hoy y la macoya de pozos mañana — <b>sin necesidad de adquirir un segundo sistema.</b></div>
 </section>
 
 <!-- 10 · CTA -->
 <section>
   <div class="kicker">Siguiente paso</div>
-  <h2>Ponla a ver tu propia planta.</h2>
-  <p class="lead">La forma más rápida de evaluar Spectra-IO es un piloto: unos cuantos sensores en las máquinas que más te preocupan, un gateway, y tus datos fluyendo en días — <b>semanas, no meses, para tomar la decisión.</b></p>
+  <h2>Pruébalo con tus propios equipos.</h2>
+  <p class="lead">La vía más rápida para evaluar Spectra-IO es mediante un programa piloto: unos cuantos sensores instalados en los activos que generan mayor preocupación, un gateway y tus datos fluyendo en cuestión de días — <b>semanas, no meses, para tomar una decisión informada.</b></p>
   <ul class="clean">
-    <li><b>Tú eliges las máquinas</b> — las que duelen cuando fallan.</li>
-    <li><b>Nosotros instalamos y comisionamos</b> — minutos por sensor, sin parar producción.</li>
-    <li><b>Tú miras tus propios datos</b> — tendencias, espectros y alertas de tus equipos, no un dataset de demostración.</li>
+    <li><b>Tú seleccionas las máquinas</b> — aquellas cuyas fallas generan mayores pérdidas.</li>
+    <li><b>Nosotros realizamos la instalación y el comisionamiento</b> — en pocos minutos por sensor y sin interrumpir la producción.</li>
+    <li><b>Tú evalúas información real</b> — tendencias, espectros y alarmas de tus propios equipos, no un conjunto de datos simulados.</li>
   </ul>
   <img class="full" style="margin-top:22px;" src="../images/factory-interior.jpg" alt="Interior de una planta industrial">
-  <div class="quote">Pide un piloto y pon la plataforma donde tiene que estar: <b>en tus máquinas.</b></div>
+  <div class="quote">Solicita un programa piloto y posiciona la plataforma donde realmente debe estar: <b>directamente en tus máquinas.</b></div>
 </section>
 
 <footer>

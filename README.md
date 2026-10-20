@@ -46,5 +46,5 @@ any capture is committed.
 
 - Industrial stock photos: [Unsplash](https://unsplash.com) (Unsplash license — free for
   commercial use).
-- Sensor, installation, and gateway-panel photos: Excemca — real production installation.
+- Sensor, installation, and gateway-panel photos: Excemca — a real field installation.
 - Contact: **cedenoj@excemca.com** (do not use personal addresses in this repo).
